@@ -31,7 +31,8 @@ public class LibraryResourceTest {
     @Test
     public void calculateFee() throws IOException {
         LibraryResource libraryResource = new LibraryResource();
-        List<String> response = libraryResource.calculateFee(new ArrayList<>(List.of("hansmeier", "6 3", "8 4", "14 4")));
+        final ArrayList<String> hansmeier = new ArrayList<>(List.of("hansmeier", "6 3", "8 4", "14 4"));
+        List<String> response = libraryResource.calculateFee(hansmeier.get(0), hansmeier);
         assertEquals(expected(), response.get(0));
     }
 

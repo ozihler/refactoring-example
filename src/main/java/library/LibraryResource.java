@@ -35,16 +35,31 @@ public class LibraryResource {
         return books;
     }
 
-    public List<String> calculateFee(List<String> rentBooksRequests) throws IOException {
-        if (rentBooksRequests == null || rentBooksRequests.size() == 0) {
-            throw new IllegalArgumentException("rent books requests cannot be null!");
+    public static boolean isInteger(String s) {
+        try {
+            Integer.parseInt(s);
+        } catch (NumberFormatException | NullPointerException e) {
+            return false;
         }
-        String customerName = rentBooksRequests.remove(0);
+        return true;
+    }
 
-        // fetch customer
-        Customer customer = customerRepository.findByUsername(customerName);
+    public List<String> calculateFee(String customerName, List<String> rentalRequests) throws IOException {
+        if (customerName == null || customerName.isBlank()) {
+            throw new IllegalArgumentException("No customer name specified!");
+        }
 
-        // fetch books
+        if (rentalRequests == null
+                || rentalRequests.size() == 0
+                || rentalRequests.stream().anyMatch(request -> request.split(" ").length != 2)
+                || rentalRequests.stream().map(request -> request.split(" ")).anyMatch(request -> !(isInteger(request[0]) && isInteger(request[1])))) {
+            throw new IllegalArgumentException("Invalid requests");
+        }
+
+        Customer customer = customerRepository.findByUsername(customerName)
+                .orElseThrow(() -> new IllegalArgumentException("Could not find user with name " + customerName));
+
+
         List<String> bookRows = Files.readAllLines(Paths.get(PATH_TO_BOOKS_FILE + "books.csv"), StandardCharsets.UTF_8);
         List<String[]> books = bookRows.stream()
                 .map(bookRow -> bookRow.split(";"))
@@ -54,26 +69,20 @@ public class LibraryResource {
 
         String result = "Rental Record for " + customer.getName() + "\n";
 
-        for (int i = 0; i < rentBooksRequests.size(); i++) {
-            final String[] rental = rentBooksRequests.get(i).split(" ");
-            final String[] book = books.get(Integer.parseInt(rental[0]));
-            double thisAmount = 0;
-
+        for (int i = 0; i < rentalRequests.size(); i++) {
+            // Rental Document: BookId + DaysRented
+            final String[] rental = rentalRequests.get(i).split(" ");
+            int bookId = Integer.parseInt(rental[0]);
             int daysRented = Integer.parseInt(rental[1]);
-            if (daysRented > 7) {
-                thisAmount = thisAmount + (daysRented - (daysRented / 7.0)) * 1.5;
-            } else {
-                thisAmount = thisAmount + daysRented * 1.5;
-            }
 
-            // create figures for this rental
+            // rental: Book + daysRented
+            final String[] book = books.get(bookId);
+
+            double thisAmount = daysRented * 0.25;
             result += "\t'" + book[1] + "' by '" + book[2] + "' for " + daysRented + " days: \t" + thisAmount + " $\n";
             totalAmount += thisAmount;
         }
-
-        // add footer lines
         result += "You owe " + totalAmount + " $\n";
-
         return List.of(result);
     }
 }
