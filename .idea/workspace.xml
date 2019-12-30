@@ -1,69 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="951410e6-be27-4414-8471-38c870e2b81f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileChanges/last-build.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileContent/fileContent.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/esdws-2019-cmd.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/esdws-2019-cmd.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/esdws-2019-cmd.test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/library/Customer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/library/InMemoryCustomerRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/library/LibraryResource.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/test/library/LibraryResourceTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/library.LibraryResourceTest.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/css/base-style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/library.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/library/books.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/test-results/test/TEST-library.LibraryResourceTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/classes/library/Customer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/classes/library/InMemoryCustomerRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/classes/library/LibraryResource.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/resources/library/books.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/test/classes/library/LibraryResourceTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/library/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/library/InMemoryCustomerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/library/LibraryResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/library/books.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/library/LibraryResourceTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="951410e6-be27-4414-8471-38c870e2b81f" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -200,7 +138,7 @@
       <updated>1577721137601</updated>
       <workItem from="1577721139056" duration="168000" />
       <workItem from="1577721375736" duration="328000" />
-      <workItem from="1577721720899" duration="2320000" />
+      <workItem from="1577721720899" duration="2414000" />
     </task>
     <servers />
   </component>
@@ -232,22 +170,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="346" y="214" width="777" height="575" key="#xdebugger.evaluate/0.0.1536.824@0.0.1536.824" timestamp="1577722056918" />
-    <state width="1495" height="211" key="GridCell.Tab.0.bottom" timestamp="1577722134197">
+    <state width="1495" height="211" key="GridCell.Tab.0.bottom" timestamp="1577729150340">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1495" height="211" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577722134197" />
-    <state width="1495" height="211" key="GridCell.Tab.0.center" timestamp="1577722134196">
+    <state width="1495" height="211" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577729150340" />
+    <state width="1495" height="211" key="GridCell.Tab.0.center" timestamp="1577729150339">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1495" height="211" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1577722134196" />
-    <state width="1495" height="211" key="GridCell.Tab.0.left" timestamp="1577722134196">
+    <state width="1495" height="211" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1577729150339" />
+    <state width="1495" height="211" key="GridCell.Tab.0.left" timestamp="1577729150339">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1495" height="211" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1577722134196" />
-    <state width="1495" height="211" key="GridCell.Tab.0.right" timestamp="1577722134197">
+    <state width="1495" height="211" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1577729150339" />
+    <state width="1495" height="211" key="GridCell.Tab.0.right" timestamp="1577729150339">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1495" height="211" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1577722134197" />
+    <state width="1495" height="211" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1577729150339" />
     <state width="1495" height="262" key="GridCell.Tab.1.bottom" timestamp="1577722074942">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
