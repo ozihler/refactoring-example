@@ -1,5 +1,9 @@
 package library;
 
+import library.application.documents.BookDocument;
+import library.domain.entities.Book;
+import library.domain.values.*;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -8,6 +12,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toList;
 
@@ -65,22 +70,41 @@ public class LibraryResource {
                 .map(bookRow -> bookRow.split(";"))
                 .collect(toList());
 
+        List<Book> books2 = bookRows.stream()
+                .map(bookRow -> bookRow.split(";"))
+                .map(bookCells -> new Book(Id.of(bookCells[0]), new Title(bookCells[1]), new Authors(Stream.of(bookCells[2].split(",")).map(Author::new).collect(toList()))))
+                .collect(toList());
+
         double totalAmount = 0;
 
         String result = "Rental Record for " + customer.getName() + "\n";
 
         for (int i = 0; i < rentalRequests.size(); i++) {
             // Rental Document: BookId + DaysRented
-            final String[] rental = rentalRequests.get(i).split(" ");
+            String request = rentalRequests.get(i);
+            final String[] rental = request.split(" ");
             int bookId = Integer.parseInt(rental[0]);
             int daysRented = Integer.parseInt(rental[1]);
+            RentalDocument rentalDocument = new RentalDocument(new BookDocument(new Id(bookId)), new DaysRented(daysRented), null);
 
             // rental: Book + daysRented
-            final String[] book = books.get(bookId);
+            final String[] book = books.get(rentalDocument.getBook().getId().asInteger());
+            final Book book2 = books2.get(rentalDocument.getBook().getId().asInteger());
 
-            double thisAmount = daysRented * 0.25;
-            result += "\t'" + book[1] + "' by '" + book[2] + "' for " + daysRented + " days: \t" + thisAmount + " $\n";
+            double thisAmount = rentalDocument.getDaysRented().asDouble() * 0.25;
+            Amount amount = new Amount(thisAmount);
             totalAmount += thisAmount;
+
+
+            // Presenter logic: Rental Document: BookDocument + daysRented + amount
+            Title title = book2.getTitle();
+            Authors authors = book2.getAuthors();
+
+            final BookDocument bookDocument = new BookDocument(book2.getId(), book2.getAuthors(), book2.getTitle());
+
+            RentalDocument rentalDocument1 = new RentalDocument(bookDocument, rentalDocument.getDaysRented(), amount);
+
+            result += "\t'" + rentalDocument1.getBook().getTitle() + "' by '" + rentalDocument1.getBook().getAuthors() + "' for " + rentalDocument1.getDaysRented().asDouble() + " days: \t" + rentalDocument1.getAmount().asDouble() + " $\n";
         }
         result += "You owe " + totalAmount + " $\n";
         return List.of(result);
